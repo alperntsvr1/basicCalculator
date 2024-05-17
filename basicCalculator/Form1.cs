@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,23 +68,35 @@ namespace basicCalculator
         }
 
         private void carp_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "*";
+        {   if(textBox1.Text.Length > 0)
+            {
+                textBox1.Text += "*";
+            }
+            
         }
 
         private void bol_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "/";
+        {if(textBox1.Text.Length > 0)
+            {
+                textBox1.Text += "/";
+            }
+           
         }
 
         private void topla_Click(object sender, EventArgs e)
-        {
-            textBox1.Text += "+";
+        {if(textBox1.Text.Length > 0)
+            {
+                textBox1.Text += "+";
+            }
+            
         }
 
         private void cikar_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "-";
+            if(textBox1.Text.Length > 0)
+            {
+                textBox1.Text += "-";
+            }
         }
 
         private void esittir_Click(object sender, EventArgs e)
@@ -113,6 +125,8 @@ namespace basicCalculator
                 char op = operators[i];
 
                 
+
+
                 switch (op)
                 {
                     case '*':
