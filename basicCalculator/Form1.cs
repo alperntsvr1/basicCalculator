@@ -106,13 +106,13 @@ namespace basicCalculator
 
             for (int i = 0; i <operators.Length; i++)
             {
-                // Parse the next number
+                
                 double operand = double.Parse(parts[i+1]);
 
-                // Determine the operator
+                
                 char op = operators[i];
 
-                // Perform the operation
+                
                 switch (op)
                 {
                     case '*':
@@ -126,7 +126,7 @@ namespace basicCalculator
                         break;
 
                     case '/':
-                        // Check for division by zero
+                        
                         if (operand == 0)
                         {
                             MessageBox.Show("Division by zero is not allowed!");
